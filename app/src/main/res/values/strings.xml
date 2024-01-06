@@ -1,3 +1,8 @@
 <resources>
+    <!--global config-->
     <string name="app_name">活在吉大</string>
+    <!--navigation-->
+    <string name="nav_dest_tab_home">主页</string>
+    <string name="nav_dest_tab_jlu">吉卡</string>
+    <string name="nav_dest_tab_mine">我的</string>
 </resources>

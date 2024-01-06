@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">SurviveInJLU</string>
+    <string name="nav_dest_tab_home">Home</string>
+    <string name="nav_dest_tab_jlu">JLU</string>
+    <string name="nav_dest_tab_mine">Mine</string>
 </resources>

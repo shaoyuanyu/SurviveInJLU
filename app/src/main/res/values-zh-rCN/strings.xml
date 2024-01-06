@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">活在吉大</string>
+    <string name="nav_dest_tab_home">主页</string>
+    <string name="nav_dest_tab_jlu">吉卡</string>
+    <string name="nav_dest_tab_mine">我的</string>
 </resources>

@@ -1,6 +1,5 @@
 package com.yusy.surviveinjlu.data.course.tables
 
-import androidx.compose.ui.graphics.Color
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import java.time.DayOfWeek
@@ -18,23 +17,17 @@ data class Course(
     val courseWeekPeriod: List<Int>, // 课程所在周
     val isFinalExamRequired: Boolean, // 是否需要期末考试
 
-    val colorInTable: Color, // 在课程表中显示的颜色
-    val courseSectionList: List<CourseSection>, // 课程"段"列表
-)
+    val colorInTable: String, // 在课程表中显示的颜色
 
-/**
- * 课程"段"
- */
-data class CourseSection(
-    val courseWeekList: List<Int>, // 哪些周
-    val courseArrangementOfDayList: List<CourseArrangementOfDay>, // 课程安排列表，一周7天7个列表项
+    val courseArrangementList: List<CourseArrangement>,
 )
 
 /**
  * 一天的课程安排
  */
-data class CourseArrangementOfDay(
+data class CourseArrangement(
     val dayOfWeek: DayOfWeek, // 周几
+    val courseWeekList: List<Int>, // 哪些周
     val sessionList: List<Int>, // 哪几节
     val isRegularSession: Boolean = true, // 是否是规则的分节(遵循课程表划分的时间安排)
     val irregularTimePeriod: List<Pair<LocalTime, LocalTime>>? = null, // 对于不规则分节的课程，自定义时间

@@ -5,6 +5,7 @@ import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
+import androidx.room.Transaction
 import androidx.room.Update
 import kotlinx.coroutines.flow.Flow
 
@@ -19,7 +20,7 @@ interface CourseDao {
     @Delete
     suspend fun delete(course: Course)
 
-    @Query("SELECT * from Courses ORDER BY (courseSemesterIndex, courseName) ASC")
+    @Query("SELECT * from Courses ORDER BY courseSemesterIndex, courseName ASC")
     fun getAllCourses(): Flow<List<Course>>
 
     @Query("SELECT * from Courses WHERE id = :id ORDER BY courseName ASC")

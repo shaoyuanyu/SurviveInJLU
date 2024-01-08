@@ -6,12 +6,14 @@ import androidx.lifecycle.viewmodel.initializer
 import androidx.lifecycle.viewmodel.viewModelFactory
 import com.yusy.surviveinjlu.MainApplication
 import com.yusy.surviveinjlu.ui.pages.home.HomeViewModel
+import com.yusy.surviveinjlu.ui.pages.timetable.TimeTableViewModel
 
 object AppViewModelProvider {
     val Factory = viewModelFactory {
-        initializer {
-            HomeViewModel(getMainApplication().container.coursesRepository)
-        }
+        // Home ViewModel
+        initializer { HomeViewModel(getMainApplication().container.coursesRepository) }
+        // TimeTable ViewModel
+        initializer { TimeTableViewModel(getMainApplication().container.coursesRepository) }
     }
 }
 

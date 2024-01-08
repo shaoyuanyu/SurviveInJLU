@@ -11,13 +11,13 @@ data class Course(
     val id: Int = 0, // 主键
 
     // 课程基本信息
-    val courseCode: Int, // 课程代码
+    val courseCode: String, // 课程代码
     val courseName: String, // 课程名
     val courseSemesterIndex: Int, // 课程所在学期
     val courseWeekPeriod: List<Int>, // 课程所在周
-    val isFinalExamRequired: Boolean, // 是否需要期末考试
+    val isFinalExamRequired: Boolean = true, // 是否需要期末考试
 
-    val colorInTable: String, // 在课程表中显示的颜色
+    val colorInTable: String = "#FFFFFF", // 在课程表中显示的颜色
 
     val courseArrangementList: List<CourseArrangement>,
 )
